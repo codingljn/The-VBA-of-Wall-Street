@@ -30,12 +30,12 @@ For i = 2 To numRows
             Range("L" & 2 + j).Value = 0
         Else
             If Cells(start, 3) = 0 Then
-                For open = start To i
-                    If Cells(open, 3).Value <> 0 Then
-                        start = open
+        For find = start To i
+        If Cells(find, 3).Value <> 0 Then
+            start = find
                         Exit For
                     End If
-                 Next open
+    Next find
             End If
             yDelta = (Cells(i, 6) - Cells(start, 3))
             pDelta = Round((yDelta / Cells(start, 3) * 100), 2)
